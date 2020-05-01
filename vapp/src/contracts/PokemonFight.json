@@ -1,0 +1,3487 @@
+{
+  "contractName": "PokemonFight",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "string",
+          "name": "_message",
+          "type": "string"
+        }
+      ],
+      "name": "BattleStatus",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "BattleNo",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "pokename1",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pokehealth1",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "pokename2",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pokehealth2",
+          "type": "uint256"
+        }
+      ],
+      "name": "battleStart",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "string",
+          "name": "pokename1",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pokehealth1",
+          "type": "uint256"
+        },
+        {
+          "internalType": "string",
+          "name": "pokename2",
+          "type": "string"
+        },
+        {
+          "internalType": "uint256",
+          "name": "pokehealth2",
+          "type": "uint256"
+        }
+      ],
+      "name": "battleContinue",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"string\",\"name\":\"_message\",\"type\":\"string\"}],\"name\":\"BattleStatus\",\"type\":\"event\"},{\"constant\":true,\"inputs\":[],\"name\":\"BattleNo\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"pokename1\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"pokehealth1\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"pokename2\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"pokehealth2\",\"type\":\"uint256\"}],\"name\":\"battleContinue\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"string\",\"name\":\"pokename1\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"pokehealth1\",\"type\":\"uint256\"},{\"internalType\":\"string\",\"name\":\"pokename2\",\"type\":\"string\"},{\"internalType\":\"uint256\",\"name\":\"pokehealth2\",\"type\":\"uint256\"}],\"name\":\"battleStart\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/gadsater/code/eth-vue-ws/contracts/PokemonFight.sol\":\"PokemonFight\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/gadsater/code/eth-vue-ws/contracts/PokemonFight.sol\":{\"keccak256\":\"0xcc8bf7113cede80e5d2c610a5691211f095357c70120933e914980bf0681fa2a\",\"urls\":[\"bzz-raw://602b3d40db209ba033b69193f3f408da921cf97444c295a36229678a0b79e68a\",\"dweb:/ipfs/QmeP2ngeFcNCJtDUGRF9oDnt2aYjQVeE9aQoh9qUVs64nE\"]}},\"version\":1}",
+  "bytecode": "0x6080604052600060015534801561001557600080fd5b50610753806100256000396000f3fe608060405234801561001057600080fd5b50600436106100415760003560e01c806368ded341146100465780639953b70014610062578063e3628db414610080575b600080fd5b610060600480360361005b91908101906104f9565b61009c565b005b61006a6102c7565b604051610077919061065b565b60405180910390f35b61009a600480360361009591908101906104f9565b6102cd565b005b60008314806100ab5750600081145b156101dd576000806001548152602001908152602001600020604051806040016040528060405180604001604052808881526020018781525081526020016040518060400160405280868152602001858152508152509080600181540180825580915050906001820390600052602060002090600402016000909192909190915060008201518160000160008201518160000190805190602001906101519291906103eb565b5060208201518160010155505060208201518160020160008201518160000190805190602001906101839291906103eb565b50602082015181600101555050505050600180600082825401925050819055507f94e9bb5b1ee6aaf8a3cee27c4a287f4ef2aa5b8affc2d4ab5d8ce2c0f616f5e36040516101d09061061b565b60405180910390a16102c1565b60008060015481526020019081526020016000206040518060400160405280604051806040016040528088815260200187815250815260200160405180604001604052808681526020018581525081525090806001815401808255809150509060018203906000526020600020906004020160009091929091909150600082015181600001600082015181600001908051906020019061027e9291906103eb565b5060208201518160010155505060208201518160020160008201518160000190805190602001906102b09291906103eb565b506020820151816001015550505050505b50505050565b60015481565b60008060015481526020019081526020016000206040518060400160405280604051806040016040528088815260200187815250815260200160405180604001604052808681526020018581525081525090806001815401808255809150509060018203906000526020600020906004020160009091929091909150600082015181600001600082015181600001908051906020019061036e9291906103eb565b5060208201518160010155505060208201518160020160008201518160000190805190602001906103a09291906103eb565b506020820151816001015550505050507f94e9bb5b1ee6aaf8a3cee27c4a287f4ef2aa5b8affc2d4ab5d8ce2c0f616f5e36040516103dd9061063b565b60405180910390a150505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061042c57805160ff191683800117855561045a565b8280016001018555821561045a579182015b8281111561045957825182559160200191906001019061043e565b5b509050610467919061046b565b5090565b61048d91905b80821115610489576000816000905550600101610471565b5090565b90565b600082601f8301126104a157600080fd5b81356104b46104af826106a3565b610676565b915080825260208301602083018583830111156104d057600080fd5b6104db8382846106ea565b50505092915050565b6000813590506104f3816106f9565b92915050565b6000806000806080858703121561050f57600080fd5b600085013567ffffffffffffffff81111561052957600080fd5b61053587828801610490565b9450506020610546878288016104e4565b935050604085013567ffffffffffffffff81111561056357600080fd5b61056f87828801610490565b9250506060610580878288016104e4565b91505092959194509250565b6000610599600c836106cf565b91507f426174746c6520656e64656400000000000000000000000000000000000000006000830152602082019050919050565b60006105d9600e836106cf565b91507f426174746c6520737461727465640000000000000000000000000000000000006000830152602082019050919050565b610615816106e0565b82525050565b600060208201905081810360008301526106348161058c565b9050919050565b60006020820190508181036000830152610654816105cc565b9050919050565b6000602082019050610670600083018461060c565b92915050565b6000604051905081810181811067ffffffffffffffff8211171561069957600080fd5b8060405250919050565b600067ffffffffffffffff8211156106ba57600080fd5b601f19601f8301169050602081019050919050565b600082825260208201905092915050565b6000819050919050565b82818337600083830152505050565b610702816106e0565b811461070d57600080fd5b5056fea365627a7a723158201792dbadaf9823e31bfb0e5b93262c5ff590a2d0f5fefa519d03556467d04d936c6578706572696d656e74616cf564736f6c63430005100040",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100415760003560e01c806368ded341146100465780639953b70014610062578063e3628db414610080575b600080fd5b610060600480360361005b91908101906104f9565b61009c565b005b61006a6102c7565b604051610077919061065b565b60405180910390f35b61009a600480360361009591908101906104f9565b6102cd565b005b60008314806100ab5750600081145b156101dd576000806001548152602001908152602001600020604051806040016040528060405180604001604052808881526020018781525081526020016040518060400160405280868152602001858152508152509080600181540180825580915050906001820390600052602060002090600402016000909192909190915060008201518160000160008201518160000190805190602001906101519291906103eb565b5060208201518160010155505060208201518160020160008201518160000190805190602001906101839291906103eb565b50602082015181600101555050505050600180600082825401925050819055507f94e9bb5b1ee6aaf8a3cee27c4a287f4ef2aa5b8affc2d4ab5d8ce2c0f616f5e36040516101d09061061b565b60405180910390a16102c1565b60008060015481526020019081526020016000206040518060400160405280604051806040016040528088815260200187815250815260200160405180604001604052808681526020018581525081525090806001815401808255809150509060018203906000526020600020906004020160009091929091909150600082015181600001600082015181600001908051906020019061027e9291906103eb565b5060208201518160010155505060208201518160020160008201518160000190805190602001906102b09291906103eb565b506020820151816001015550505050505b50505050565b60015481565b60008060015481526020019081526020016000206040518060400160405280604051806040016040528088815260200187815250815260200160405180604001604052808681526020018581525081525090806001815401808255809150509060018203906000526020600020906004020160009091929091909150600082015181600001600082015181600001908051906020019061036e9291906103eb565b5060208201518160010155505060208201518160020160008201518160000190805190602001906103a09291906103eb565b506020820151816001015550505050507f94e9bb5b1ee6aaf8a3cee27c4a287f4ef2aa5b8affc2d4ab5d8ce2c0f616f5e36040516103dd9061063b565b60405180910390a150505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f1061042c57805160ff191683800117855561045a565b8280016001018555821561045a579182015b8281111561045957825182559160200191906001019061043e565b5b509050610467919061046b565b5090565b61048d91905b80821115610489576000816000905550600101610471565b5090565b90565b600082601f8301126104a157600080fd5b81356104b46104af826106a3565b610676565b915080825260208301602083018583830111156104d057600080fd5b6104db8382846106ea565b50505092915050565b6000813590506104f3816106f9565b92915050565b6000806000806080858703121561050f57600080fd5b600085013567ffffffffffffffff81111561052957600080fd5b61053587828801610490565b9450506020610546878288016104e4565b935050604085013567ffffffffffffffff81111561056357600080fd5b61056f87828801610490565b9250506060610580878288016104e4565b91505092959194509250565b6000610599600c836106cf565b91507f426174746c6520656e64656400000000000000000000000000000000000000006000830152602082019050919050565b60006105d9600e836106cf565b91507f426174746c6520737461727465640000000000000000000000000000000000006000830152602082019050919050565b610615816106e0565b82525050565b600060208201905081810360008301526106348161058c565b9050919050565b60006020820190508181036000830152610654816105cc565b9050919050565b6000602082019050610670600083018461060c565b92915050565b6000604051905081810181811067ffffffffffffffff8211171561069957600080fd5b8060405250919050565b600067ffffffffffffffff8211156106ba57600080fd5b601f19601f8301169050602081019050919050565b600082825260208201905092915050565b6000819050919050565b82818337600083830152505050565b610702816106e0565b811461070d57600080fd5b5056fea365627a7a723158201792dbadaf9823e31bfb0e5b93262c5ff590a2d0f5fefa519d03556467d04d936c6578706572696d656e74616cf564736f6c63430005100040",
+  "sourceMap": "68:1500:2:-;;;397:1;371:27;;68:1500;8:9:-1;5:2;;;30:1;27;20:12;5:2;68:1500:2;;;;;;;",
+  "deployedSourceMap": "68:1500:2:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;68:1500:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;812:753;;;;;;;;;;;;;;;;:::i;:::-;;371:27;;;:::i;:::-;;;;;;;;;;;;;;;;404:402;;;;;;;;;;;;;;;;:::i;:::-;;812:753;1002:1;987:11;:16;:36;;;;1022:1;1007:11;:16;987:36;983:576;;;1039:13;:23;1053:8;;1039:23;;;;;;;;;;;1085:142;;;;;;;;1117:35;;;;;;;;1129:9;1117:35;;;;1140:11;1117:35;;;1085:142;;;;1174:35;;;;;;;;1186:9;1174:35;;;;1197:11;1174:35;;;1085:142;;;1039:202;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;1039:202:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;1267:1;1255:8;;:13;;;;;;;;;;;1287:28;;;;;;;;;;;;;;;983:576;;;1346:13;:23;1360:8;;1346:23;;;;;;;;;;;1392:142;;;;;;;;1424:35;;;;;;;;1436:9;1424:35;;;;1447:11;1424:35;;;1392:142;;;;1481:35;;;;;;;;1493:9;1481:35;;;;1504:11;1481:35;;;1392:142;;;1346:202;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;1346:202:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;983:576;812:753;;;;:::o;371:27::-;;;;:::o;404:402::-;572:13;:23;586:8;;572:23;;;;;;;;;;;614:130;;;;;;;;642:35;;;;;;;;654:9;642:35;;;;665:11;642:35;;;614:130;;;;695:35;;;;;;;;707:9;695:35;;;;718:11;695:35;;;614:130;;;572:182;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;572:182:2;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;769:30;;;;;;;;;;;;;;;404:402;;;;:::o;68:1500::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;6:442:-1:-;;108:3;101:4;93:6;89:17;85:27;75:2;;126:1;123;116:12;75:2;163:6;150:20;185:65;200:49;242:6;200:49;;;185:65;;;176:74;;270:6;263:5;256:21;306:4;298:6;294:17;339:4;332:5;328:16;374:3;365:6;360:3;356:16;353:25;350:2;;;391:1;388;381:12;350:2;401:41;435:6;430:3;425;401:41;;;68:380;;;;;;;;456:130;;536:6;523:20;514:29;;548:33;575:5;548:33;;;508:78;;;;;593:829;;;;;768:3;756:9;747:7;743:23;739:33;736:2;;;785:1;782;775:12;736:2;848:1;837:9;833:17;820:31;871:18;863:6;860:30;857:2;;;903:1;900;893:12;857:2;923:63;978:7;969:6;958:9;954:22;923:63;;;913:73;;799:193;1023:2;1041:53;1086:7;1077:6;1066:9;1062:22;1041:53;;;1031:63;;1002:98;1159:2;1148:9;1144:18;1131:32;1183:18;1175:6;1172:30;1169:2;;;1215:1;1212;1205:12;1169:2;1235:63;1290:7;1281:6;1270:9;1266:22;1235:63;;;1225:73;;1110:194;1335:2;1353:53;1398:7;1389:6;1378:9;1374:22;1353:53;;;1343:63;;1314:98;730:692;;;;;;;;1430:312;;1590:67;1654:2;1649:3;1590:67;;;1583:74;;1690:14;1686:1;1681:3;1677:11;1670:35;1733:2;1728:3;1724:12;1717:19;;1576:166;;;;1751:314;;1911:67;1975:2;1970:3;1911:67;;;1904:74;;2011:16;2007:1;2002:3;1998:11;1991:37;2056:2;2051:3;2047:12;2040:19;;1897:168;;;;2073:113;2156:24;2174:5;2156:24;;;2151:3;2144:37;2138:48;;;2193:407;;2384:2;2373:9;2369:18;2361:26;;2434:9;2428:4;2424:20;2420:1;2409:9;2405:17;2398:47;2459:131;2585:4;2459:131;;;2451:139;;2355:245;;;;2607:407;;2798:2;2787:9;2783:18;2775:26;;2848:9;2842:4;2838:20;2834:1;2823:9;2819:17;2812:47;2873:131;2999:4;2873:131;;;2865:139;;2769:245;;;;3021:213;;3139:2;3128:9;3124:18;3116:26;;3153:71;3221:1;3210:9;3206:17;3197:6;3153:71;;;3110:124;;;;;3241:256;;3303:2;3297:9;3287:19;;3341:4;3333:6;3329:17;3440:6;3428:10;3425:22;3404:18;3392:10;3389:34;3386:62;3383:2;;;3461:1;3458;3451:12;3383:2;3481:10;3477:2;3470:22;3281:216;;;;;3504:322;;3648:18;3640:6;3637:30;3634:2;;;3680:1;3677;3670:12;3634:2;3747:4;3743:9;3736:4;3728:6;3724:17;3720:33;3712:41;;3811:4;3805;3801:15;3793:23;;3571:255;;;;3834:163;;3949:6;3944:3;3937:19;3986:4;3981:3;3977:14;3962:29;;3930:67;;;;;4005:72;;4067:5;4056:16;;4050:27;;;;4085:145;4166:6;4161:3;4156;4143:30;4222:1;4213:6;4208:3;4204:16;4197:27;4136:94;;;;4238:117;4307:24;4325:5;4307:24;;;4300:5;4297:35;4287:2;;4346:1;4343;4336:12;4287:2;4281:74;",
+  "source": "pragma solidity >=0.4.21 <0.7.0;\npragma experimental ABIEncoderV2;\n\ncontract PokemonFight {\n    event BattleStatus(string _message);\n\n    struct PokemonData {\n        string PokemonName;\n        uint256 PokemonHealth;\n    }\n\n    struct PokeBattle {\n        PokemonData Pokemon1;\n        PokemonData Pokemon2;\n    }\n    mapping(uint256 => PokeBattle[]) BattleDetails;\n    uint256 public BattleNo = 0;\n    function battleStart(\n        string memory pokename1,\n        uint256 pokehealth1,\n        string memory pokename2,\n        uint256 pokehealth2\n    ) public {\n        BattleDetails[BattleNo].push(\n            PokeBattle(\n                PokemonData(pokename1, pokehealth1),\n                PokemonData(pokename2, pokehealth2)\n            )\n        );\n        emit BattleStatus(\"Battle started\");\n    }\n\n    function battleContinue(\n        string memory pokename1,\n        uint256 pokehealth1,\n        string memory pokename2,\n        uint256 pokehealth2\n    ) public {\n        if (pokehealth1 == 0 || pokehealth2 == 0) {\n            BattleDetails[BattleNo].push(\n                PokeBattle(\n                    PokemonData(pokename1, pokehealth1),\n                    PokemonData(pokename2, pokehealth2)\n                )\n            );\n            BattleNo += 1;\n            emit BattleStatus(\"Battle ended\");\n        } else {\n            BattleDetails[BattleNo].push(\n                PokeBattle(\n                    PokemonData(pokename1, pokehealth1),\n                    PokemonData(pokename2, pokehealth2)\n                )\n            );\n        }\n    }\n\n}\n",
+  "sourcePath": "/home/gadsater/code/eth-vue-ws/contracts/PokemonFight.sol",
+  "ast": {
+    "absolutePath": "/home/gadsater/code/eth-vue-ws/contracts/PokemonFight.sol",
+    "exportedSymbols": {
+      "PokemonFight": [
+        294
+      ]
+    },
+    "id": 295,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 176,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:2"
+      },
+      {
+        "id": 177,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:33:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 294,
+        "linearizedBaseContracts": [
+          294
+        ],
+        "name": "PokemonFight",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 181,
+            "name": "BattleStatus",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 180,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 179,
+                  "indexed": false,
+                  "name": "_message",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 181,
+                  "src": "115:15:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 178,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "115:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "114:17:2"
+            },
+            "src": "96:36:2"
+          },
+          {
+            "canonicalName": "PokemonFight.PokemonData",
+            "id": 186,
+            "members": [
+              {
+                "constant": false,
+                "id": 183,
+                "name": "PokemonName",
+                "nodeType": "VariableDeclaration",
+                "scope": 186,
+                "src": "167:18:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 182,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "167:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 185,
+                "name": "PokemonHealth",
+                "nodeType": "VariableDeclaration",
+                "scope": 186,
+                "src": "195:21:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 184,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "195:7:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "PokemonData",
+            "nodeType": "StructDefinition",
+            "scope": 294,
+            "src": "138:85:2",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "PokemonFight.PokeBattle",
+            "id": 191,
+            "members": [
+              {
+                "constant": false,
+                "id": 188,
+                "name": "Pokemon1",
+                "nodeType": "VariableDeclaration",
+                "scope": 191,
+                "src": "257:20:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_PokemonData_$186_storage_ptr",
+                  "typeString": "struct PokemonFight.PokemonData"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 187,
+                  "name": "PokemonData",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 186,
+                  "src": "257:11:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_PokemonData_$186_storage_ptr",
+                    "typeString": "struct PokemonFight.PokemonData"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 190,
+                "name": "Pokemon2",
+                "nodeType": "VariableDeclaration",
+                "scope": 191,
+                "src": "287:20:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_PokemonData_$186_storage_ptr",
+                  "typeString": "struct PokemonFight.PokemonData"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 189,
+                  "name": "PokemonData",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 186,
+                  "src": "287:11:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_PokemonData_$186_storage_ptr",
+                    "typeString": "struct PokemonFight.PokemonData"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "PokeBattle",
+            "nodeType": "StructDefinition",
+            "scope": 294,
+            "src": "229:85:2",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 196,
+            "name": "BattleDetails",
+            "nodeType": "VariableDeclaration",
+            "scope": 294,
+            "src": "319:46:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_array$_t_struct$_PokeBattle_$191_storage_$dyn_storage_$",
+              "typeString": "mapping(uint256 => struct PokemonFight.PokeBattle[])"
+            },
+            "typeName": {
+              "id": 195,
+              "keyType": {
+                "id": 192,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "327:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "319:32:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_array$_t_struct$_PokeBattle_$191_storage_$dyn_storage_$",
+                "typeString": "mapping(uint256 => struct PokemonFight.PokeBattle[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "contractScope": null,
+                  "id": 193,
+                  "name": "PokeBattle",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 191,
+                  "src": "338:10:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_PokeBattle_$191_storage_ptr",
+                    "typeString": "struct PokemonFight.PokeBattle"
+                  }
+                },
+                "id": 194,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "338:12:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_PokeBattle_$191_storage_$dyn_storage_ptr",
+                  "typeString": "struct PokemonFight.PokeBattle[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 199,
+            "name": "BattleNo",
+            "nodeType": "VariableDeclaration",
+            "scope": 294,
+            "src": "371:27:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 197,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "371:7:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 198,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "397:1:2",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 230,
+              "nodeType": "Block",
+              "src": "562:244:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "id": 216,
+                                "name": "pokename1",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 201,
+                                "src": "654:9:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                }
+                              },
+                              {
+                                "argumentTypes": null,
+                                "id": 217,
+                                "name": "pokehealth1",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 203,
+                                "src": "665:11:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "id": 215,
+                              "name": "PokemonData",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 186,
+                              "src": "642:11:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_struct$_PokemonData_$186_storage_ptr_$",
+                                "typeString": "type(struct PokemonFight.PokemonData storage pointer)"
+                              }
+                            },
+                            "id": 218,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "structConstructorCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "642:35:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_PokemonData_$186_memory",
+                              "typeString": "struct PokemonFight.PokemonData memory"
+                            }
+                          },
+                          {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "id": 220,
+                                "name": "pokename2",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 205,
+                                "src": "707:9:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                }
+                              },
+                              {
+                                "argumentTypes": null,
+                                "id": 221,
+                                "name": "pokehealth2",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 207,
+                                "src": "718:11:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "id": 219,
+                              "name": "PokemonData",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 186,
+                              "src": "695:11:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_struct$_PokemonData_$186_storage_ptr_$",
+                                "typeString": "type(struct PokemonFight.PokemonData storage pointer)"
+                              }
+                            },
+                            "id": 222,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "structConstructorCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "695:35:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_PokemonData_$186_memory",
+                              "typeString": "struct PokemonFight.PokemonData memory"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_struct$_PokemonData_$186_memory",
+                              "typeString": "struct PokemonFight.PokemonData memory"
+                            },
+                            {
+                              "typeIdentifier": "t_struct$_PokemonData_$186_memory",
+                              "typeString": "struct PokemonFight.PokemonData memory"
+                            }
+                          ],
+                          "id": 214,
+                          "name": "PokeBattle",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 191,
+                          "src": "614:10:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_PokeBattle_$191_storage_ptr_$",
+                            "typeString": "type(struct PokemonFight.PokeBattle storage pointer)"
+                          }
+                        },
+                        "id": 223,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "614:130:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_PokeBattle_$191_memory",
+                          "typeString": "struct PokemonFight.PokeBattle memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_PokeBattle_$191_memory",
+                          "typeString": "struct PokemonFight.PokeBattle memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 210,
+                          "name": "BattleDetails",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 196,
+                          "src": "572:13:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_uint256_$_t_array$_t_struct$_PokeBattle_$191_storage_$dyn_storage_$",
+                            "typeString": "mapping(uint256 => struct PokemonFight.PokeBattle storage ref[] storage ref)"
+                          }
+                        },
+                        "id": 212,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 211,
+                          "name": "BattleNo",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 199,
+                          "src": "586:8:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "572:23:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_PokeBattle_$191_storage_$dyn_storage",
+                          "typeString": "struct PokemonFight.PokeBattle storage ref[] storage ref"
+                        }
+                      },
+                      "id": 213,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "572:28:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_PokeBattle_$191_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct PokemonFight.PokeBattle storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 224,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "572:182:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 225,
+                  "nodeType": "ExpressionStatement",
+                  "src": "572:182:2"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "426174746c652073746172746564",
+                        "id": 227,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "782:16:2",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_9b8c067b47351afc9fe434d2070c701e623591b1eae7059d1fbac0dd5c4a13c9",
+                          "typeString": "literal_string \"Battle started\""
+                        },
+                        "value": "Battle started"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_9b8c067b47351afc9fe434d2070c701e623591b1eae7059d1fbac0dd5c4a13c9",
+                          "typeString": "literal_string \"Battle started\""
+                        }
+                      ],
+                      "id": 226,
+                      "name": "BattleStatus",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 181,
+                      "src": "769:12:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory)"
+                      }
+                    },
+                    "id": 228,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "769:30:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 229,
+                  "nodeType": "EmitStatement",
+                  "src": "764:35:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 231,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "battleStart",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 208,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 201,
+                  "name": "pokename1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 231,
+                  "src": "434:23:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 200,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "434:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 203,
+                  "name": "pokehealth1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 231,
+                  "src": "467:19:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 202,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "467:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 205,
+                  "name": "pokename2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 231,
+                  "src": "496:23:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 204,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "496:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 207,
+                  "name": "pokehealth2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 231,
+                  "src": "529:19:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 206,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "529:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "424:130:2"
+            },
+            "returnParameters": {
+              "id": 209,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "562:0:2"
+            },
+            "scope": 294,
+            "src": "404:402:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 292,
+              "nodeType": "Block",
+              "src": "973:592:2",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "id": 248,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 244,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "id": 242,
+                        "name": "pokehealth1",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 235,
+                        "src": "987:11:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "==",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 243,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1002:1:2",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      },
+                      "src": "987:16:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "||",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 247,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "id": 245,
+                        "name": "pokehealth2",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 239,
+                        "src": "1007:11:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "==",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 246,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1022:1:2",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      },
+                      "src": "1007:16:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "987:36:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "id": 290,
+                    "nodeType": "Block",
+                    "src": "1332:227:2",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "arguments": [
+                                    {
+                                      "argumentTypes": null,
+                                      "id": 280,
+                                      "name": "pokename1",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 233,
+                                      "src": "1436:9:2",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string memory"
+                                      }
+                                    },
+                                    {
+                                      "argumentTypes": null,
+                                      "id": 281,
+                                      "name": "pokehealth1",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 235,
+                                      "src": "1447:11:2",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    }
+                                  ],
+                                  "expression": {
+                                    "argumentTypes": [
+                                      {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string memory"
+                                      },
+                                      {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    ],
+                                    "id": 279,
+                                    "name": "PokemonData",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 186,
+                                    "src": "1424:11:2",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_type$_t_struct$_PokemonData_$186_storage_ptr_$",
+                                      "typeString": "type(struct PokemonFight.PokemonData storage pointer)"
+                                    }
+                                  },
+                                  "id": 282,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "kind": "structConstructorCall",
+                                  "lValueRequested": false,
+                                  "names": [],
+                                  "nodeType": "FunctionCall",
+                                  "src": "1424:35:2",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_PokemonData_$186_memory",
+                                    "typeString": "struct PokemonFight.PokemonData memory"
+                                  }
+                                },
+                                {
+                                  "argumentTypes": null,
+                                  "arguments": [
+                                    {
+                                      "argumentTypes": null,
+                                      "id": 284,
+                                      "name": "pokename2",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 237,
+                                      "src": "1493:9:2",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string memory"
+                                      }
+                                    },
+                                    {
+                                      "argumentTypes": null,
+                                      "id": 285,
+                                      "name": "pokehealth2",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 239,
+                                      "src": "1504:11:2",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    }
+                                  ],
+                                  "expression": {
+                                    "argumentTypes": [
+                                      {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string memory"
+                                      },
+                                      {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    ],
+                                    "id": 283,
+                                    "name": "PokemonData",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 186,
+                                    "src": "1481:11:2",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_type$_t_struct$_PokemonData_$186_storage_ptr_$",
+                                      "typeString": "type(struct PokemonFight.PokemonData storage pointer)"
+                                    }
+                                  },
+                                  "id": 286,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "kind": "structConstructorCall",
+                                  "lValueRequested": false,
+                                  "names": [],
+                                  "nodeType": "FunctionCall",
+                                  "src": "1481:35:2",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_PokemonData_$186_memory",
+                                    "typeString": "struct PokemonFight.PokemonData memory"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_struct$_PokemonData_$186_memory",
+                                    "typeString": "struct PokemonFight.PokemonData memory"
+                                  },
+                                  {
+                                    "typeIdentifier": "t_struct$_PokemonData_$186_memory",
+                                    "typeString": "struct PokemonFight.PokemonData memory"
+                                  }
+                                ],
+                                "id": 278,
+                                "name": "PokeBattle",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 191,
+                                "src": "1392:10:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_struct$_PokeBattle_$191_storage_ptr_$",
+                                  "typeString": "type(struct PokemonFight.PokeBattle storage pointer)"
+                                }
+                              },
+                              "id": 287,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "structConstructorCall",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "1392:142:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_PokeBattle_$191_memory",
+                                "typeString": "struct PokemonFight.PokeBattle memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_struct$_PokeBattle_$191_memory",
+                                "typeString": "struct PokemonFight.PokeBattle memory"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 274,
+                                "name": "BattleDetails",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 196,
+                                "src": "1346:13:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_mapping$_t_uint256_$_t_array$_t_struct$_PokeBattle_$191_storage_$dyn_storage_$",
+                                  "typeString": "mapping(uint256 => struct PokemonFight.PokeBattle storage ref[] storage ref)"
+                                }
+                              },
+                              "id": 276,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 275,
+                                "name": "BattleNo",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 199,
+                                "src": "1360:8:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "1346:23:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_PokeBattle_$191_storage_$dyn_storage",
+                                "typeString": "struct PokemonFight.PokeBattle storage ref[] storage ref"
+                              }
+                            },
+                            "id": 277,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "push",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "1346:28:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_PokeBattle_$191_storage_$returns$_t_uint256_$",
+                              "typeString": "function (struct PokemonFight.PokeBattle storage ref) returns (uint256)"
+                            }
+                          },
+                          "id": 288,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1346:202:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 289,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1346:202:2"
+                      }
+                    ]
+                  },
+                  "id": 291,
+                  "nodeType": "IfStatement",
+                  "src": "983:576:2",
+                  "trueBody": {
+                    "id": 273,
+                    "nodeType": "Block",
+                    "src": "1025:301:2",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "arguments": [
+                                    {
+                                      "argumentTypes": null,
+                                      "id": 255,
+                                      "name": "pokename1",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 233,
+                                      "src": "1129:9:2",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string memory"
+                                      }
+                                    },
+                                    {
+                                      "argumentTypes": null,
+                                      "id": 256,
+                                      "name": "pokehealth1",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 235,
+                                      "src": "1140:11:2",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    }
+                                  ],
+                                  "expression": {
+                                    "argumentTypes": [
+                                      {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string memory"
+                                      },
+                                      {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    ],
+                                    "id": 254,
+                                    "name": "PokemonData",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 186,
+                                    "src": "1117:11:2",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_type$_t_struct$_PokemonData_$186_storage_ptr_$",
+                                      "typeString": "type(struct PokemonFight.PokemonData storage pointer)"
+                                    }
+                                  },
+                                  "id": 257,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "kind": "structConstructorCall",
+                                  "lValueRequested": false,
+                                  "names": [],
+                                  "nodeType": "FunctionCall",
+                                  "src": "1117:35:2",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_PokemonData_$186_memory",
+                                    "typeString": "struct PokemonFight.PokemonData memory"
+                                  }
+                                },
+                                {
+                                  "argumentTypes": null,
+                                  "arguments": [
+                                    {
+                                      "argumentTypes": null,
+                                      "id": 259,
+                                      "name": "pokename2",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 237,
+                                      "src": "1186:9:2",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string memory"
+                                      }
+                                    },
+                                    {
+                                      "argumentTypes": null,
+                                      "id": 260,
+                                      "name": "pokehealth2",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 239,
+                                      "src": "1197:11:2",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    }
+                                  ],
+                                  "expression": {
+                                    "argumentTypes": [
+                                      {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string memory"
+                                      },
+                                      {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    ],
+                                    "id": 258,
+                                    "name": "PokemonData",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 186,
+                                    "src": "1174:11:2",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_type$_t_struct$_PokemonData_$186_storage_ptr_$",
+                                      "typeString": "type(struct PokemonFight.PokemonData storage pointer)"
+                                    }
+                                  },
+                                  "id": 261,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "kind": "structConstructorCall",
+                                  "lValueRequested": false,
+                                  "names": [],
+                                  "nodeType": "FunctionCall",
+                                  "src": "1174:35:2",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_PokemonData_$186_memory",
+                                    "typeString": "struct PokemonFight.PokemonData memory"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_struct$_PokemonData_$186_memory",
+                                    "typeString": "struct PokemonFight.PokemonData memory"
+                                  },
+                                  {
+                                    "typeIdentifier": "t_struct$_PokemonData_$186_memory",
+                                    "typeString": "struct PokemonFight.PokemonData memory"
+                                  }
+                                ],
+                                "id": 253,
+                                "name": "PokeBattle",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 191,
+                                "src": "1085:10:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_struct$_PokeBattle_$191_storage_ptr_$",
+                                  "typeString": "type(struct PokemonFight.PokeBattle storage pointer)"
+                                }
+                              },
+                              "id": 262,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "structConstructorCall",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "1085:142:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_PokeBattle_$191_memory",
+                                "typeString": "struct PokemonFight.PokeBattle memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_struct$_PokeBattle_$191_memory",
+                                "typeString": "struct PokemonFight.PokeBattle memory"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 249,
+                                "name": "BattleDetails",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 196,
+                                "src": "1039:13:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_mapping$_t_uint256_$_t_array$_t_struct$_PokeBattle_$191_storage_$dyn_storage_$",
+                                  "typeString": "mapping(uint256 => struct PokemonFight.PokeBattle storage ref[] storage ref)"
+                                }
+                              },
+                              "id": 251,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 250,
+                                "name": "BattleNo",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 199,
+                                "src": "1053:8:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "1039:23:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_PokeBattle_$191_storage_$dyn_storage",
+                                "typeString": "struct PokemonFight.PokeBattle storage ref[] storage ref"
+                              }
+                            },
+                            "id": 252,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "push",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "1039:28:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_PokeBattle_$191_storage_$returns$_t_uint256_$",
+                              "typeString": "function (struct PokemonFight.PokeBattle storage ref) returns (uint256)"
+                            }
+                          },
+                          "id": 263,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1039:202:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 264,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1039:202:2"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 267,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "id": 265,
+                            "name": "BattleNo",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 199,
+                            "src": "1255:8:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "+=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "hexValue": "31",
+                            "id": 266,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "1267:1:2",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_1_by_1",
+                              "typeString": "int_const 1"
+                            },
+                            "value": "1"
+                          },
+                          "src": "1255:13:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 268,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1255:13:2"
+                      },
+                      {
+                        "eventCall": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "426174746c6520656e646564",
+                              "id": 270,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "string",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1300:14:2",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_stringliteral_1837eeb602a7cacc88b262f95f9561358db935a3288ea8150fe458a85cfa17f9",
+                                "typeString": "literal_string \"Battle ended\""
+                              },
+                              "value": "Battle ended"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_stringliteral_1837eeb602a7cacc88b262f95f9561358db935a3288ea8150fe458a85cfa17f9",
+                                "typeString": "literal_string \"Battle ended\""
+                              }
+                            ],
+                            "id": 269,
+                            "name": "BattleStatus",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 181,
+                            "src": "1287:12:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$returns$__$",
+                              "typeString": "function (string memory)"
+                            }
+                          },
+                          "id": 271,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1287:28:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 272,
+                        "nodeType": "EmitStatement",
+                        "src": "1282:33:2"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 293,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "battleContinue",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 240,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 233,
+                  "name": "pokename1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 293,
+                  "src": "845:23:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 232,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "845:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 235,
+                  "name": "pokehealth1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 293,
+                  "src": "878:19:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 234,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "878:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 237,
+                  "name": "pokename2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 293,
+                  "src": "907:23:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 236,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "907:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 239,
+                  "name": "pokehealth2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 293,
+                  "src": "940:19:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 238,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "940:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "835:130:2"
+            },
+            "returnParameters": {
+              "id": 241,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "973:0:2"
+            },
+            "scope": 294,
+            "src": "812:753:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 295,
+        "src": "68:1500:2"
+      }
+    ],
+    "src": "0:1569:2"
+  },
+  "legacyAST": {
+    "absolutePath": "/home/gadsater/code/eth-vue-ws/contracts/PokemonFight.sol",
+    "exportedSymbols": {
+      "PokemonFight": [
+        294
+      ]
+    },
+    "id": 295,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 176,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:2"
+      },
+      {
+        "id": 177,
+        "literals": [
+          "experimental",
+          "ABIEncoderV2"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "33:33:2"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 294,
+        "linearizedBaseContracts": [
+          294
+        ],
+        "name": "PokemonFight",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 181,
+            "name": "BattleStatus",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 180,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 179,
+                  "indexed": false,
+                  "name": "_message",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 181,
+                  "src": "115:15:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 178,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "115:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "114:17:2"
+            },
+            "src": "96:36:2"
+          },
+          {
+            "canonicalName": "PokemonFight.PokemonData",
+            "id": 186,
+            "members": [
+              {
+                "constant": false,
+                "id": 183,
+                "name": "PokemonName",
+                "nodeType": "VariableDeclaration",
+                "scope": 186,
+                "src": "167:18:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 182,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "167:6:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 185,
+                "name": "PokemonHealth",
+                "nodeType": "VariableDeclaration",
+                "scope": 186,
+                "src": "195:21:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 184,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "195:7:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "PokemonData",
+            "nodeType": "StructDefinition",
+            "scope": 294,
+            "src": "138:85:2",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "PokemonFight.PokeBattle",
+            "id": 191,
+            "members": [
+              {
+                "constant": false,
+                "id": 188,
+                "name": "Pokemon1",
+                "nodeType": "VariableDeclaration",
+                "scope": 191,
+                "src": "257:20:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_PokemonData_$186_storage_ptr",
+                  "typeString": "struct PokemonFight.PokemonData"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 187,
+                  "name": "PokemonData",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 186,
+                  "src": "257:11:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_PokemonData_$186_storage_ptr",
+                    "typeString": "struct PokemonFight.PokemonData"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 190,
+                "name": "Pokemon2",
+                "nodeType": "VariableDeclaration",
+                "scope": 191,
+                "src": "287:20:2",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_PokemonData_$186_storage_ptr",
+                  "typeString": "struct PokemonFight.PokemonData"
+                },
+                "typeName": {
+                  "contractScope": null,
+                  "id": 189,
+                  "name": "PokemonData",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 186,
+                  "src": "287:11:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_PokemonData_$186_storage_ptr",
+                    "typeString": "struct PokemonFight.PokemonData"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "PokeBattle",
+            "nodeType": "StructDefinition",
+            "scope": 294,
+            "src": "229:85:2",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 196,
+            "name": "BattleDetails",
+            "nodeType": "VariableDeclaration",
+            "scope": 294,
+            "src": "319:46:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_uint256_$_t_array$_t_struct$_PokeBattle_$191_storage_$dyn_storage_$",
+              "typeString": "mapping(uint256 => struct PokemonFight.PokeBattle[])"
+            },
+            "typeName": {
+              "id": 195,
+              "keyType": {
+                "id": 192,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "327:7:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "319:32:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_uint256_$_t_array$_t_struct$_PokeBattle_$191_storage_$dyn_storage_$",
+                "typeString": "mapping(uint256 => struct PokemonFight.PokeBattle[])"
+              },
+              "valueType": {
+                "baseType": {
+                  "contractScope": null,
+                  "id": 193,
+                  "name": "PokeBattle",
+                  "nodeType": "UserDefinedTypeName",
+                  "referencedDeclaration": 191,
+                  "src": "338:10:2",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_PokeBattle_$191_storage_ptr",
+                    "typeString": "struct PokemonFight.PokeBattle"
+                  }
+                },
+                "id": 194,
+                "length": null,
+                "nodeType": "ArrayTypeName",
+                "src": "338:12:2",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_PokeBattle_$191_storage_$dyn_storage_ptr",
+                  "typeString": "struct PokemonFight.PokeBattle[]"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 199,
+            "name": "BattleNo",
+            "nodeType": "VariableDeclaration",
+            "scope": 294,
+            "src": "371:27:2",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 197,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "371:7:2",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 198,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "397:1:2",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 230,
+              "nodeType": "Block",
+              "src": "562:244:2",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "id": 216,
+                                "name": "pokename1",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 201,
+                                "src": "654:9:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                }
+                              },
+                              {
+                                "argumentTypes": null,
+                                "id": 217,
+                                "name": "pokehealth1",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 203,
+                                "src": "665:11:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "id": 215,
+                              "name": "PokemonData",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 186,
+                              "src": "642:11:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_struct$_PokemonData_$186_storage_ptr_$",
+                                "typeString": "type(struct PokemonFight.PokemonData storage pointer)"
+                              }
+                            },
+                            "id": 218,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "structConstructorCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "642:35:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_PokemonData_$186_memory",
+                              "typeString": "struct PokemonFight.PokemonData memory"
+                            }
+                          },
+                          {
+                            "argumentTypes": null,
+                            "arguments": [
+                              {
+                                "argumentTypes": null,
+                                "id": 220,
+                                "name": "pokename2",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 205,
+                                "src": "707:9:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                }
+                              },
+                              {
+                                "argumentTypes": null,
+                                "id": 221,
+                                "name": "pokehealth2",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 207,
+                                "src": "718:11:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_string_memory_ptr",
+                                  "typeString": "string memory"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "id": 219,
+                              "name": "PokemonData",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 186,
+                              "src": "695:11:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_struct$_PokemonData_$186_storage_ptr_$",
+                                "typeString": "type(struct PokemonFight.PokemonData storage pointer)"
+                              }
+                            },
+                            "id": 222,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "kind": "structConstructorCall",
+                            "lValueRequested": false,
+                            "names": [],
+                            "nodeType": "FunctionCall",
+                            "src": "695:35:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_struct$_PokemonData_$186_memory",
+                              "typeString": "struct PokemonFight.PokemonData memory"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_struct$_PokemonData_$186_memory",
+                              "typeString": "struct PokemonFight.PokemonData memory"
+                            },
+                            {
+                              "typeIdentifier": "t_struct$_PokemonData_$186_memory",
+                              "typeString": "struct PokemonFight.PokemonData memory"
+                            }
+                          ],
+                          "id": 214,
+                          "name": "PokeBattle",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 191,
+                          "src": "614:10:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_struct$_PokeBattle_$191_storage_ptr_$",
+                            "typeString": "type(struct PokemonFight.PokeBattle storage pointer)"
+                          }
+                        },
+                        "id": 223,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "structConstructorCall",
+                        "lValueRequested": false,
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "614:130:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_PokeBattle_$191_memory",
+                          "typeString": "struct PokemonFight.PokeBattle memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_PokeBattle_$191_memory",
+                          "typeString": "struct PokemonFight.PokeBattle memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
+                          "argumentTypes": null,
+                          "id": 210,
+                          "name": "BattleDetails",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 196,
+                          "src": "572:13:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_mapping$_t_uint256_$_t_array$_t_struct$_PokeBattle_$191_storage_$dyn_storage_$",
+                            "typeString": "mapping(uint256 => struct PokemonFight.PokeBattle storage ref[] storage ref)"
+                          }
+                        },
+                        "id": 212,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 211,
+                          "name": "BattleNo",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 199,
+                          "src": "586:8:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "nodeType": "IndexAccess",
+                        "src": "572:23:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_PokeBattle_$191_storage_$dyn_storage",
+                          "typeString": "struct PokemonFight.PokeBattle storage ref[] storage ref"
+                        }
+                      },
+                      "id": 213,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "572:28:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_PokeBattle_$191_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct PokemonFight.PokeBattle storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 224,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "572:182:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 225,
+                  "nodeType": "ExpressionStatement",
+                  "src": "572:182:2"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "426174746c652073746172746564",
+                        "id": 227,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "string",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "782:16:2",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_stringliteral_9b8c067b47351afc9fe434d2070c701e623591b1eae7059d1fbac0dd5c4a13c9",
+                          "typeString": "literal_string \"Battle started\""
+                        },
+                        "value": "Battle started"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_stringliteral_9b8c067b47351afc9fe434d2070c701e623591b1eae7059d1fbac0dd5c4a13c9",
+                          "typeString": "literal_string \"Battle started\""
+                        }
+                      ],
+                      "id": 226,
+                      "name": "BattleStatus",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 181,
+                      "src": "769:12:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$returns$__$",
+                        "typeString": "function (string memory)"
+                      }
+                    },
+                    "id": 228,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "769:30:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 229,
+                  "nodeType": "EmitStatement",
+                  "src": "764:35:2"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 231,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "battleStart",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 208,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 201,
+                  "name": "pokename1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 231,
+                  "src": "434:23:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 200,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "434:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 203,
+                  "name": "pokehealth1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 231,
+                  "src": "467:19:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 202,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "467:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 205,
+                  "name": "pokename2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 231,
+                  "src": "496:23:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 204,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "496:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 207,
+                  "name": "pokehealth2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 231,
+                  "src": "529:19:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 206,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "529:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "424:130:2"
+            },
+            "returnParameters": {
+              "id": 209,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "562:0:2"
+            },
+            "scope": 294,
+            "src": "404:402:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 292,
+              "nodeType": "Block",
+              "src": "973:592:2",
+              "statements": [
+                {
+                  "condition": {
+                    "argumentTypes": null,
+                    "commonType": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "id": 248,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 244,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "id": 242,
+                        "name": "pokehealth1",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 235,
+                        "src": "987:11:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "==",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 243,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1002:1:2",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      },
+                      "src": "987:16:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "||",
+                    "rightExpression": {
+                      "argumentTypes": null,
+                      "commonType": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "id": 247,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "argumentTypes": null,
+                        "id": 245,
+                        "name": "pokehealth2",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 239,
+                        "src": "1007:11:2",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "==",
+                      "rightExpression": {
+                        "argumentTypes": null,
+                        "hexValue": "30",
+                        "id": 246,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "number",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "1022:1:2",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_rational_0_by_1",
+                          "typeString": "int_const 0"
+                        },
+                        "value": "0"
+                      },
+                      "src": "1007:16:2",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "987:36:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "falseBody": {
+                    "id": 290,
+                    "nodeType": "Block",
+                    "src": "1332:227:2",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "arguments": [
+                                    {
+                                      "argumentTypes": null,
+                                      "id": 280,
+                                      "name": "pokename1",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 233,
+                                      "src": "1436:9:2",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string memory"
+                                      }
+                                    },
+                                    {
+                                      "argumentTypes": null,
+                                      "id": 281,
+                                      "name": "pokehealth1",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 235,
+                                      "src": "1447:11:2",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    }
+                                  ],
+                                  "expression": {
+                                    "argumentTypes": [
+                                      {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string memory"
+                                      },
+                                      {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    ],
+                                    "id": 279,
+                                    "name": "PokemonData",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 186,
+                                    "src": "1424:11:2",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_type$_t_struct$_PokemonData_$186_storage_ptr_$",
+                                      "typeString": "type(struct PokemonFight.PokemonData storage pointer)"
+                                    }
+                                  },
+                                  "id": 282,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "kind": "structConstructorCall",
+                                  "lValueRequested": false,
+                                  "names": [],
+                                  "nodeType": "FunctionCall",
+                                  "src": "1424:35:2",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_PokemonData_$186_memory",
+                                    "typeString": "struct PokemonFight.PokemonData memory"
+                                  }
+                                },
+                                {
+                                  "argumentTypes": null,
+                                  "arguments": [
+                                    {
+                                      "argumentTypes": null,
+                                      "id": 284,
+                                      "name": "pokename2",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 237,
+                                      "src": "1493:9:2",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string memory"
+                                      }
+                                    },
+                                    {
+                                      "argumentTypes": null,
+                                      "id": 285,
+                                      "name": "pokehealth2",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 239,
+                                      "src": "1504:11:2",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    }
+                                  ],
+                                  "expression": {
+                                    "argumentTypes": [
+                                      {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string memory"
+                                      },
+                                      {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    ],
+                                    "id": 283,
+                                    "name": "PokemonData",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 186,
+                                    "src": "1481:11:2",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_type$_t_struct$_PokemonData_$186_storage_ptr_$",
+                                      "typeString": "type(struct PokemonFight.PokemonData storage pointer)"
+                                    }
+                                  },
+                                  "id": 286,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "kind": "structConstructorCall",
+                                  "lValueRequested": false,
+                                  "names": [],
+                                  "nodeType": "FunctionCall",
+                                  "src": "1481:35:2",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_PokemonData_$186_memory",
+                                    "typeString": "struct PokemonFight.PokemonData memory"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_struct$_PokemonData_$186_memory",
+                                    "typeString": "struct PokemonFight.PokemonData memory"
+                                  },
+                                  {
+                                    "typeIdentifier": "t_struct$_PokemonData_$186_memory",
+                                    "typeString": "struct PokemonFight.PokemonData memory"
+                                  }
+                                ],
+                                "id": 278,
+                                "name": "PokeBattle",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 191,
+                                "src": "1392:10:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_struct$_PokeBattle_$191_storage_ptr_$",
+                                  "typeString": "type(struct PokemonFight.PokeBattle storage pointer)"
+                                }
+                              },
+                              "id": 287,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "structConstructorCall",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "1392:142:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_PokeBattle_$191_memory",
+                                "typeString": "struct PokemonFight.PokeBattle memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_struct$_PokeBattle_$191_memory",
+                                "typeString": "struct PokemonFight.PokeBattle memory"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 274,
+                                "name": "BattleDetails",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 196,
+                                "src": "1346:13:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_mapping$_t_uint256_$_t_array$_t_struct$_PokeBattle_$191_storage_$dyn_storage_$",
+                                  "typeString": "mapping(uint256 => struct PokemonFight.PokeBattle storage ref[] storage ref)"
+                                }
+                              },
+                              "id": 276,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 275,
+                                "name": "BattleNo",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 199,
+                                "src": "1360:8:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "1346:23:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_PokeBattle_$191_storage_$dyn_storage",
+                                "typeString": "struct PokemonFight.PokeBattle storage ref[] storage ref"
+                              }
+                            },
+                            "id": 277,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "push",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "1346:28:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_PokeBattle_$191_storage_$returns$_t_uint256_$",
+                              "typeString": "function (struct PokemonFight.PokeBattle storage ref) returns (uint256)"
+                            }
+                          },
+                          "id": 288,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1346:202:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 289,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1346:202:2"
+                      }
+                    ]
+                  },
+                  "id": 291,
+                  "nodeType": "IfStatement",
+                  "src": "983:576:2",
+                  "trueBody": {
+                    "id": 273,
+                    "nodeType": "Block",
+                    "src": "1025:301:2",
+                    "statements": [
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "arguments": [
+                                {
+                                  "argumentTypes": null,
+                                  "arguments": [
+                                    {
+                                      "argumentTypes": null,
+                                      "id": 255,
+                                      "name": "pokename1",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 233,
+                                      "src": "1129:9:2",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string memory"
+                                      }
+                                    },
+                                    {
+                                      "argumentTypes": null,
+                                      "id": 256,
+                                      "name": "pokehealth1",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 235,
+                                      "src": "1140:11:2",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    }
+                                  ],
+                                  "expression": {
+                                    "argumentTypes": [
+                                      {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string memory"
+                                      },
+                                      {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    ],
+                                    "id": 254,
+                                    "name": "PokemonData",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 186,
+                                    "src": "1117:11:2",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_type$_t_struct$_PokemonData_$186_storage_ptr_$",
+                                      "typeString": "type(struct PokemonFight.PokemonData storage pointer)"
+                                    }
+                                  },
+                                  "id": 257,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "kind": "structConstructorCall",
+                                  "lValueRequested": false,
+                                  "names": [],
+                                  "nodeType": "FunctionCall",
+                                  "src": "1117:35:2",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_PokemonData_$186_memory",
+                                    "typeString": "struct PokemonFight.PokemonData memory"
+                                  }
+                                },
+                                {
+                                  "argumentTypes": null,
+                                  "arguments": [
+                                    {
+                                      "argumentTypes": null,
+                                      "id": 259,
+                                      "name": "pokename2",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 237,
+                                      "src": "1186:9:2",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string memory"
+                                      }
+                                    },
+                                    {
+                                      "argumentTypes": null,
+                                      "id": 260,
+                                      "name": "pokehealth2",
+                                      "nodeType": "Identifier",
+                                      "overloadedDeclarations": [],
+                                      "referencedDeclaration": 239,
+                                      "src": "1197:11:2",
+                                      "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    }
+                                  ],
+                                  "expression": {
+                                    "argumentTypes": [
+                                      {
+                                        "typeIdentifier": "t_string_memory_ptr",
+                                        "typeString": "string memory"
+                                      },
+                                      {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                      }
+                                    ],
+                                    "id": 258,
+                                    "name": "PokemonData",
+                                    "nodeType": "Identifier",
+                                    "overloadedDeclarations": [],
+                                    "referencedDeclaration": 186,
+                                    "src": "1174:11:2",
+                                    "typeDescriptions": {
+                                      "typeIdentifier": "t_type$_t_struct$_PokemonData_$186_storage_ptr_$",
+                                      "typeString": "type(struct PokemonFight.PokemonData storage pointer)"
+                                    }
+                                  },
+                                  "id": 261,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "kind": "structConstructorCall",
+                                  "lValueRequested": false,
+                                  "names": [],
+                                  "nodeType": "FunctionCall",
+                                  "src": "1174:35:2",
+                                  "typeDescriptions": {
+                                    "typeIdentifier": "t_struct$_PokemonData_$186_memory",
+                                    "typeString": "struct PokemonFight.PokemonData memory"
+                                  }
+                                }
+                              ],
+                              "expression": {
+                                "argumentTypes": [
+                                  {
+                                    "typeIdentifier": "t_struct$_PokemonData_$186_memory",
+                                    "typeString": "struct PokemonFight.PokemonData memory"
+                                  },
+                                  {
+                                    "typeIdentifier": "t_struct$_PokemonData_$186_memory",
+                                    "typeString": "struct PokemonFight.PokemonData memory"
+                                  }
+                                ],
+                                "id": 253,
+                                "name": "PokeBattle",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 191,
+                                "src": "1085:10:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_type$_t_struct$_PokeBattle_$191_storage_ptr_$",
+                                  "typeString": "type(struct PokemonFight.PokeBattle storage pointer)"
+                                }
+                              },
+                              "id": 262,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "kind": "structConstructorCall",
+                              "lValueRequested": false,
+                              "names": [],
+                              "nodeType": "FunctionCall",
+                              "src": "1085:142:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_struct$_PokeBattle_$191_memory",
+                                "typeString": "struct PokemonFight.PokeBattle memory"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_struct$_PokeBattle_$191_memory",
+                                "typeString": "struct PokemonFight.PokeBattle memory"
+                              }
+                            ],
+                            "expression": {
+                              "argumentTypes": null,
+                              "baseExpression": {
+                                "argumentTypes": null,
+                                "id": 249,
+                                "name": "BattleDetails",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 196,
+                                "src": "1039:13:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_mapping$_t_uint256_$_t_array$_t_struct$_PokeBattle_$191_storage_$dyn_storage_$",
+                                  "typeString": "mapping(uint256 => struct PokemonFight.PokeBattle storage ref[] storage ref)"
+                                }
+                              },
+                              "id": 251,
+                              "indexExpression": {
+                                "argumentTypes": null,
+                                "id": 250,
+                                "name": "BattleNo",
+                                "nodeType": "Identifier",
+                                "overloadedDeclarations": [],
+                                "referencedDeclaration": 199,
+                                "src": "1053:8:2",
+                                "typeDescriptions": {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              },
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "nodeType": "IndexAccess",
+                              "src": "1039:23:2",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_array$_t_struct$_PokeBattle_$191_storage_$dyn_storage",
+                                "typeString": "struct PokemonFight.PokeBattle storage ref[] storage ref"
+                              }
+                            },
+                            "id": 252,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "push",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "1039:28:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_PokeBattle_$191_storage_$returns$_t_uint256_$",
+                              "typeString": "function (struct PokemonFight.PokeBattle storage ref) returns (uint256)"
+                            }
+                          },
+                          "id": 263,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1039:202:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 264,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1039:202:2"
+                      },
+                      {
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 267,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "leftHandSide": {
+                            "argumentTypes": null,
+                            "id": 265,
+                            "name": "BattleNo",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 199,
+                            "src": "1255:8:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          },
+                          "nodeType": "Assignment",
+                          "operator": "+=",
+                          "rightHandSide": {
+                            "argumentTypes": null,
+                            "hexValue": "31",
+                            "id": 266,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "1267:1:2",
+                            "subdenomination": null,
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_rational_1_by_1",
+                              "typeString": "int_const 1"
+                            },
+                            "value": "1"
+                          },
+                          "src": "1255:13:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
+                        "id": 268,
+                        "nodeType": "ExpressionStatement",
+                        "src": "1255:13:2"
+                      },
+                      {
+                        "eventCall": {
+                          "argumentTypes": null,
+                          "arguments": [
+                            {
+                              "argumentTypes": null,
+                              "hexValue": "426174746c6520656e646564",
+                              "id": 270,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "kind": "string",
+                              "lValueRequested": false,
+                              "nodeType": "Literal",
+                              "src": "1300:14:2",
+                              "subdenomination": null,
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_stringliteral_1837eeb602a7cacc88b262f95f9561358db935a3288ea8150fe458a85cfa17f9",
+                                "typeString": "literal_string \"Battle ended\""
+                              },
+                              "value": "Battle ended"
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_stringliteral_1837eeb602a7cacc88b262f95f9561358db935a3288ea8150fe458a85cfa17f9",
+                                "typeString": "literal_string \"Battle ended\""
+                              }
+                            ],
+                            "id": 269,
+                            "name": "BattleStatus",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 181,
+                            "src": "1287:12:2",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_event_nonpayable$_t_string_memory_ptr_$returns$__$",
+                              "typeString": "function (string memory)"
+                            }
+                          },
+                          "id": 271,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1287:28:2",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_tuple$__$",
+                            "typeString": "tuple()"
+                          }
+                        },
+                        "id": 272,
+                        "nodeType": "EmitStatement",
+                        "src": "1282:33:2"
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 293,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "battleContinue",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 240,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 233,
+                  "name": "pokename1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 293,
+                  "src": "845:23:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 232,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "845:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 235,
+                  "name": "pokehealth1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 293,
+                  "src": "878:19:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 234,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "878:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 237,
+                  "name": "pokename2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 293,
+                  "src": "907:23:2",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 236,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "907:6:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 239,
+                  "name": "pokehealth2",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 293,
+                  "src": "940:19:2",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 238,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "940:7:2",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "835:130:2"
+            },
+            "returnParameters": {
+              "id": 241,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "973:0:2"
+            },
+            "scope": 294,
+            "src": "812:753:2",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 295,
+        "src": "68:1500:2"
+      }
+    ],
+    "src": "0:1569:2"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {
+        "0x94e9bb5b1ee6aaf8a3cee27c4a287f4ef2aa5b8affc2d4ab5d8ce2c0f616f5e3": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "internalType": "string",
+              "name": "_message",
+              "type": "string"
+            }
+          ],
+          "name": "BattleStatus",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x2Ff2159A1d4cef27b08F58D78B52a3CfFEd1125C",
+      "transactionHash": "0x9cb9ae56ffd59c04cac2724532c0b637cd53f4230aabc760acd5b08cf8823615"
+    }
+  },
+  "schemaVersion": "3.0.23",
+  "updatedAt": "2020-03-13T12:18:46.266Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
